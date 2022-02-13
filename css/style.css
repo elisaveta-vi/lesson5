@@ -1,0 +1,226 @@
+@import "null.css";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,regular,700,800,italic&display=swap");
+
+@font-face {
+	font-family: "Merriweather";
+	src: url("../fonts/Merriweather-Regular.woff2") format("woff2"),
+		url("../fonts/Merriweather-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Merriweather";
+	src: url("../fonts/Merriweather-Bold.woff2") format("woff2"), url("../fonts/Merriweather-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Merriweather";
+	src: url("../fonts/Merriweather-Black.woff2") format("woff2"), url("../fonts/Merriweather-Black.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Merriweather";
+	src: url("../fonts/Merriweather-Italic.woff2") format("woff2"),
+		url("../fonts/Merriweather-Italic.woff") format("woff");
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+body {
+	font-family: "Open Sans", sans-serif;
+	line-height: 1.5;
+	font-size: 18px;
+}
+
+/* Выравнивание блочного элемента (его ширина должна быть меньше родителя) с помощью margin */
+[class*="-container"] {
+	min-height: 100%;
+	overflow: hidden;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.title {
+	font-family: "Merriweather", serif;
+	font-size: 70px;
+	font-weight: 900;
+	line-height: 1.2;
+	text-align: center;
+	color: darkgreen;
+	text-shadow: 2px 2px 20px rgb(169, 219, 53);
+	margin-bottom: 50px;
+}
+
+/* Ширина 100%, margin (работает только с правым отступом при левом выравнивании) будет за приделами родителя */
+.introduction {
+	width: 100%;
+	margin: 0 50px 50px 0;
+}
+p {
+	margin-bottom: 25px;
+}
+.country {
+	text-align: justify;
+}
+.name {
+	font-weight: 700;
+	color: red;
+	text-transform: uppercase;
+	letter-spacing: 20px;
+	font-weight: 800;
+	font-size: 25px;
+}
+.lid {
+	font-style: italic;
+	text-decoration: underline;
+}
+h2 {
+	font-size: 70px;
+	font-family: "Merriweather", serif;
+	font-weight: 700;
+}
+.culture,
+.lunguage {
+	padding: 0 420px 0 50px;
+}
+.climate {
+	text-align: right;
+	padding: 0 50px 0 420px;
+}
+.culture,
+.climate,
+.lunguage {
+	color: rgba(40, 73, 10, 0.883);
+	font-weight: 300;
+}
+.sea {
+	padding-left: 420px;
+}
+/* отрицательный margin */
+.picture {
+	text-align: center;
+	margin-top: -130px;
+}
+.wall {
+	margin-left: -200px;
+	font-family: "Merriweather", serif;
+	font-style: italic;
+	color: crimson;
+}
+/* одинаковый паддинг по бокам */
+.island {
+	padding: 20px 200px 30px;
+	max-height: 300px;
+	overflow: scroll;
+	margin-bottom: 30px;
+}
+.build {
+	max-height: 400px;
+}
+/* Обрезаем фото (оборачиваем в div, т.к. pading на картинку не действует)*/
+.crop {
+	overflow: hidden;
+}
+#mljet {
+	font-size: 70px;
+	color: rgb(255, 0, 255);
+	font-weight: 900;
+	font-style: oblique;
+	text-shadow: 5px 5px 5px rgb(233, 192, 12);
+}
+
+/* Процент от ширины родителя */
+.theater {
+	padding: 5% 15%;
+	max-height: 300px;
+	overflow: auto;
+	margin-bottom: 30px;
+}
+/* Ширина в процентах и прибитие к правой стороне*/
+.fight {
+	width: 30%;
+	margin: 0 0 25px auto;
+}
+
+#pula {
+	color: white;
+	text-shadow: 4px 4px 4px #000;
+	font-size: 60px;
+}
+#dubrovnik {
+	color: cornflowerblue;
+	text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+}
+#park {
+	text-transform: uppercase;
+	color: coral;
+	text-shadow: 0px 0px 20px rgb(15, 167, 40);
+	text-align: center;
+}
+/* Фиксированная ширина блока(содержимое уходит за пределы видимости при уменьшении ширины экрана) */
+/* Если <meta name="viewport" content="width=1200">, то будет масштабирование */
+.lake-1 {
+	width: 700px;
+}
+
+/* Не шире, чем -- текст перестраивается без деформации */
+.lake-2 {
+	max-width: 700px;
+	text-decoration: underline;
+	color: blueviolet;
+}
+/* Не уже, чем -- текст уходит за пределы экрана, либо деформируется при ширине меньше 700px */
+.lake-3 {
+	min-width: 700px;
+}
+/* Уменьшение картинки в процентах от родителя (img--блочно-строчный)*/
+.persent {
+	width: 30%;
+}
+
+.inline {
+	/* не действует ширина */
+	width: 400px;
+	/* жестко скрываем */
+	display: none;
+}
+.hide {
+	/* Скрываем мягко */
+	width: 400px;
+}
+
+/* <!-- Гибридный блочно-строчный тип --> */
+.menu {
+	display: inline-block;
+	text-decoration: underline;
+	width: 250px;
+	color: deeppink;
+	font-size: 20px;
+	font-style: italic;
+}
+.block {
+	margin-bottom: 50px;
+}
+
+/* Схлопывание */
+.sea {
+	margin-bottom: 40px;
+}
+.island {
+	margin-top: 20px;
+}
+.layout {
+	font-size: 40px;
+	margin-bottom: 80px;
+	text-align: center;
+}
+.lake {
+	margin-bottom: 60px;
+}
+a {
+	color: red;
+}
